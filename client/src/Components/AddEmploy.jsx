@@ -53,7 +53,7 @@ const AddEmploy = () => {
       }
 
       const response = await axios.post(
-        `http://localhost:7000/addEmployDetails`,
+        `${import.meta.env.VITE_server}/addEmployDetails`,
         formData,
         {
           headers: {

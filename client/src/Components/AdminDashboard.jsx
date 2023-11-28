@@ -70,7 +70,7 @@ const AdminDashboard = () => {
   const handleDeleteEmploy = async (employId) => {
     try {
       const response = await axios.post(
-        `http://localhost:7000/deleteEmployeeDetails`,
+        `${import.meta.env.VITE_server}/deleteEmployeeDetails`,
         {
           data: employId,
         }
@@ -89,7 +89,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     const handleEmployData = async () => {
       try {
-        const response = await axios.get(`http://localhost:7000/employDetails`);
+        const response = await axios.get(`${import.meta.env.VITE_server}/employDetails`);
         setEmployeeData(response.data.EmployData);
         setSearchFilter(response.data.EmployData);
       } catch (error) {

@@ -37,7 +37,7 @@ const [refresh,setRefresh] =useState(false)
   useEffect(() => {
     const handleDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:7000/employDetailsSingle?id=${location.state.employeeData}`);
+        const response = await axios.get(`${import.meta.env.VITE_server}/employDetailsSingle?id=${location.state.employeeData}`);
         const data = response.data.value;
         setEmployeeData(data);
         console.log("Employee Data:", response.data.EmployData);
@@ -50,7 +50,7 @@ const [refresh,setRefresh] =useState(false)
 
   const handleDetailsEdit = async () => {
     const response = await axios.post(
-      `http://localhost:7000/editEmployeeDetails`,
+      `${import.meta.env.VITE_server}/editEmployeeDetails`,
       {
         data: changedData,
         id:location.state.employeeData
