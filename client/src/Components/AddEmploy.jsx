@@ -53,7 +53,7 @@ const AddEmploy = () => {
       }
 
       const response = await axios.post(
-        `${import.meta.env.VITE_server}/addEmployDetails`,
+        `${import.meta.env.VITE_server}addEmployDetails`,
         formData,
         {
           headers: {
