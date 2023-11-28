@@ -488,7 +488,7 @@ const AdminDashboard = () => {
                                         Aadhar image
                                       </span>
                                       <img
-                                        src={`http://localhost:7000/uploads/${employee?.aadhar_image}`}
+                                        src={`${import.meta.env.VITE_server}${employee?.aadhar_image}`}
                                         width={100}
                                         height={100}
                                         alt="aadhar"
@@ -501,7 +501,7 @@ const AdminDashboard = () => {
                                       <img
                                         width={100}
                                         height={100}
-                                        src={`http://localhost:7000/uploads/${employee?.pancard_image}`}
+                                        src={`${import.meta.env.VITE_server}${employee?.pancard_image}`}
                                         alt="pan"
                                       />
                                     </div>
