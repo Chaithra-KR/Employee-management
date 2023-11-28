@@ -1,0 +1,85 @@
+const mongoose = require('mongoose')
+const employee = mongoose.Schema({
+    staff:{
+        type:String,
+        required:true
+    },
+    current_address:{
+        type:String,
+        required:true
+    },
+    email:{
+        type:String,
+        required:true
+    },
+    gender:{
+        type:String,
+        required:true
+    },
+    aadhar_number:{
+        type:String,
+        required:true
+    },
+    pan_number:{
+        type:String,
+        required:true
+    },
+    pf_number:{
+        type:Number,
+        required:true
+    },
+    uan_number:{
+        type:Number,
+        required:true
+    },
+    emergency_contact_person_name:{
+        type:String,
+        required:true
+    },
+    emergency_contact_person_address:{
+        type:String,
+        required:true
+    },
+    phone:{
+        type:Number,
+        required:true
+    },
+    permanent_address:{
+        type:String,
+        required:true
+    },
+    dob:{
+        type:String,
+        required:true
+    },
+    marital_status:{
+        type:String,
+        required:true
+    },
+    aadhar_image:{
+        type:String,
+        // required:true
+    },
+    pancard_image:{
+        type:String,
+        // required:true
+    },
+    esi_number:{
+        type:Number,
+        required:true
+    },
+    blood_group:{
+        type:String,
+        required:true
+    },
+    emergency_contact_person_number:{
+        type:Number,
+        required:true
+    },
+    emergency_contact_person_relation:{
+        type:String,
+        required:true
+    },
+})
+
+module.exports = mongoose.model("Employee",employee)
